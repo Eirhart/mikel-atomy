@@ -23,9 +23,9 @@ const Nav = () => {
         animate={{height: show ? 'fit-content' : 0}}
         >
           <div onClick={() => setShow(false)} className='close'><FontAwesomeIcon icon={faXmark} /></div>
-          <div className='btn'>Atomy Shopping Mall<FontAwesomeIcon icon={faAngleRight} className="contcaret" /></div>
-          <div className='btn'>JOIN us now!<FontAwesomeIcon icon={faAngleRight} className="contcaret" /></div>
-          <div className='btn btnlast'>Contact me<FontAwesomeIcon icon={faAngleRight} className="contcaret" /></div>
+          <a href='https://www.atomy.com/ph/Home/Product/MallMain' className='btn'>Atomy Shopping Mall<FontAwesomeIcon icon={faAngleRight} className="contcaret" /></a>
+          <a href='https://formaloo.net/fkok2' className='btn'>JOIN us now!<FontAwesomeIcon icon={faAngleRight} className="contcaret" /></a>
+          <a href='https://www.messenger.com/t/100001646731426/' className='btn btnlast'>Contact me<FontAwesomeIcon icon={faAngleRight} className="contcaret" /></a>
         </motion.div>
     </div>
   )

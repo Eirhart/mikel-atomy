@@ -6,19 +6,10 @@ import { motion } from 'framer-motion'
 import ReactPlayer from 'react-player'
 
 const Content = () => {
-    const [index, setIndex] = useState(0)
     const [popUp, setPopUp] = useState(false)
     const [layout, setLayout] = useState(1)
     const [width, setWidth] = useState(0)
     const carousel = useRef()
-
-    const nextItem = () => {
-        setIndex(index >= data.length - 1 ? 0 : index + 1)
-    }
-
-    const prevItem = () => {
-        setIndex(index === 0 ? data.length - 1: index - 1)
-    }
 
     const popFunction = (id) => {
         setPopUp(true)
@@ -37,7 +28,6 @@ const Content = () => {
 
   return (
     <div className='contentContainer'>
-        {/* <div className='blocker'></div> */}
         <div className='contentDesc'>
             <h1>Company's details and information</h1>
             <p>These are the videos that explain what ATOMY is all about</p>
