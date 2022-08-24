@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+/* NAV */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  color: #06a3e3;
+  position: fixed;
+  width: 100vw;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav div{
+  cursor: pointer;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navPop{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background-color: white;
+  /* padding: 20px; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.btn{
+  padding: 0 40px 0 20px;
+}
+
+.btnlast{
+  padding-bottom: 20px;
+}
+
+.close{
+  display: flex;
+  justify-content: flex-end;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 10px 10px 0 0;
+}
+
+/* HEADER */
+.header{
+  display: flex;
+  flex-direction: column;
+}
+
+.header img{
+  border-radius: 50%;
+  width: 200px;
+  align-self: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.header h1{
+  font-size: 40px;
+  color: white;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.header p{
+  margin: 0 20px;
+  color: rgb(231, 231, 231);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.header .skew{
+  background-color: white;
+  height: 180px;
+  width: 100vw;
+  transform: skewY(-5deg);
+  position: absolute;
+  top: 475px;
+  z-index: -1;
+}
+
+.header .button{
+  background-color: rgb(0, 238, 159);
+  width: fit-content;
+  padding: 5px 20px;
+  margin-left: 20px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.caret{
+  margin-left: 10px;
+}
+
+/* CONTENT */
+.contentContainer{
+  color: #06a3e3;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.contentDesc h1{
+  margin: 0 20px 10px;
+  letter-spacing: 1px;
+  font-size: 3;
+}
+
+.contentDesc p{
+  margin: 0 20px 10px;
+  color: rgb(48, 48, 48);
+}
+
+
+.content{
+  color: black;
+  background-color: white;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 10px;
+}
+
+.contentButton{
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card{
+  width: 380px;
+  overflow: hidden;
+  display: flex;
+  /* align-items: center; */
+  padding: 10px 0;
+}
+
+.content h3{
+  font-size: 25px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content p{
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel{
+  display: flex;
+  gap: 20px;
+}
+
+.items{
+  min-width: 300px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  /* position: inherit; */
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc{
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: brightness(50%);
+  gap: 5px;
+}
+
+hr{
+  width: 100%;
+}
+
+/* POPUP */
+.popContainer{
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.closeButton{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.popContent{
+  background-color: #06a3e3;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 380px;
+}
+
+.popContent h3{
+  color: rgb(255, 255, 255);
+}
+
+/* FOOTER */
+.footer{
+  margin: 20px 20px;
+}
+
+.footer h1{
+  font-size: 20px;
+}
+
+.joinButton{
+  background-color: rgb(0, 238, 159);
+  width: 150px;
+  margin-top: 20px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+span{
+  color: rgb(0, 238, 159);
+}
+
+.contact{
+  margin-top: 20px;
+  padding: 5px 0;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+
+.contcaret{
+  margin-left: 10px;
+}
+
+.buttons{
+  display: flex;
+  gap: 20px;
 }
